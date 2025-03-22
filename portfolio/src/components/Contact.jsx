@@ -49,7 +49,7 @@ const Contact = () => {
           Let’s build something amazing together. Download my resume to know more about my work and experience.
         </p>
 
-        <a 
+        <a className='contact-button'
             href="/resume.pdf"
             download
             target="_blank"
