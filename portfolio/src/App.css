@@ -1,0 +1,9 @@
+.text-purple {
+  color: #a855f7;
+}
+
+.navbar-brand.text-purple:hover {
+  color: #d0a7ff;
+  transition: color 0.3s ease-in-out;
+}
+
