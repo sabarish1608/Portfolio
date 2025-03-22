@@ -49,8 +49,12 @@ const Contact = () => {
           Let’s build something amazing together. Download my resume to know more about my work and experience.
         </p>
 
-        <a href="/resume.pdf" download className="contact-button delay-6">
-          <FaFileDownload className="download-icon" /> Download Resume
+        <a 
+            href="/resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaFileDownload className="download-icon" /> Download Resume
         </a>
       </div>
     </section>
