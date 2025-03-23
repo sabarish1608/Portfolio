@@ -50,7 +50,7 @@ const Contact = () => {
         </p>
 
         <a className='contact-button'
-            href="/resume.pdf"
+            href="/Portfolio/resume.pdf"
             download
             target="_blank"
             rel="noopener noreferrer">

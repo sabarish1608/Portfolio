@@ -40,7 +40,7 @@ const About = () => {
 
           <p className="about-detail delay-3">
             <FaGraduationCap className="icon" /> <strong>Education</strong><br />
-            • B.Tech Computer Science with specialization in Cybersecurity,<br />
+            • B.Tech Computer Science with specialization in Cybersecurity<br />
             • SRM Institute of Science and Technology, Ramapuram<br />
             • CGPA: 8.85
           </p>
