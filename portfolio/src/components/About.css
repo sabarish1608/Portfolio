@@ -1,24 +1,18 @@
 .about-section {
-  padding: 80px 20px;
-  background: #0f0f1a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 10%;
+  background-color: #0f0f1a;
+  color: #fff;
 }
 
 .about-container {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  gap: 40px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 50px;
 }
 
 .about-left {
   flex: 1;
-  min-width: 280px;
   display: flex;
   justify-content: center;
 }
@@ -28,105 +22,76 @@
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
-  transition: transform 0.4s ease;
-}
-
-.about-image:hover {
-  transform: scale(1.05);
+  box-shadow: 0px 0px 20px 5px rgba(138, 43, 226, 0.6);
 }
 
 .about-right {
   flex: 2;
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
 }
 
 .about-title {
-  font-size: 2.4rem;
-  color: #a88bff;
+  font-size: 2rem;
+  font-weight: 1.4rem;
+  color: #b589f7; /* Subtle violet */
   margin-bottom: 20px;
 }
 
 .about-detail {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  font-size: 1rem;
-  margin-bottom: 18px;
-  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-.about-section.visible .about-detail {
-  opacity: 1;
-  transform: translateY(0);
+.about-detail h3 {
+  font-size: 1.2rem; /* Reduced from previous size */
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
 }
-
-.delay-1 { transition-delay: 0.2s; }
-.delay-2 { transition-delay: 0.4s; }
-.delay-3 { transition-delay: 0.6s; }
-.delay-4 { transition-delay: 0.8s; }
-.delay-5 { transition-delay: 1s; }
 
 .icon {
-  color: #bb86fc;
+  color: #b589f7;
   margin-right: 8px;
 }
 
+/* Initially hide all elements */
+.about-title,
+.about-detail {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When the About section is in view, show them */
+.about-section.visible .about-title,
+.about-section.visible .about-detail {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add delays for smooth staggered animations */
+.about-title { transition-delay: 0.1s; }
+.about-detail:nth-child(1) { transition-delay: 0.2s; }
+.about-detail:nth-child(2) { transition-delay: 0.3s; }
+.about-detail:nth-child(3) { transition-delay: 0.4s; }
+.about-detail:nth-child(4) { transition-delay: 0.5s; }
+.about-detail:nth-child(5) { transition-delay: 0.6s; }
+
+
 @media (max-width: 768px) {
-  .about-section {
-    display: flex;
+  .about-container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 40px 20px;
-    width: 100%;
+  }
+
+  .about-left {
+    margin-bottom: 20px;
   }
 
   .about-image {
     width: 200px;
     height: 200px;
-    margin-bottom: 20px;
   }
-
-  .about-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  .about-detail h3 {
-    margin-top: 26px;
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    font-weight: 600;
-  }
-  
-  .about-detail p,
-  .about-detail ul {
-    margin-bottom: 16px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
-  .about-content {
-    width: 100%;
-    max-width: 400px;
-    font-size: 0.95rem;
-  }
-  
-  .about-section h2,
-  .about-section p,
-  .about-section ul {
-    width: 100%;
-  }
-  
-  .about-icons {
-    justify-content: center;
-  }
-  
 }
-
-
-

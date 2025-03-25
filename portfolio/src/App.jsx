@@ -6,13 +6,16 @@ import Navbar from './components/NavBar';
 import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
+import React, { useRef } from "react";
 
-function App() {
+const App = () => {
+  const aboutRef = useRef(null);
+
   return (
     <>
       <Navbar/>
-      <Hero/>
-      <About/>
+      <Hero aboutRef={aboutRef} />
+      <About ref={aboutRef} />
       <Projects/>
       <Contact/>
     </>

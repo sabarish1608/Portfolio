@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import "./Projects.css"
+import "./Projects.css";
 
 const projects = [
   {
     title: "Charity Website",
     description: "A platform for donations, adoptions, and helping children in need.",
-    techStack: ["ReactJS", "CSS","Bootstrap"],
+    techStack: ["ReactJS", "CSS", "Bootstrap"],
     github: "https://github.com/sabarish1608/CharityCare-Website",
     liveDemo: "https://sabarish1608.github.io/CharityCare-Website/",
     workInProgress: true,
   },
   {
-    title: "Website Vulnerability Analyzer",
+    title: "SSRF and BAC Scanner",
     description: "A tool to detect SSRF and Broken Access Control vulnerabilities visually.",
     techStack: ["ReactJS", "Django"],
     github: "https://github.com/yourgithub/ssrf-bac-scanner",
@@ -22,12 +22,32 @@ const projects = [
 ];
 
 const Projects = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+  }, []);
+
   return (
-    <section id="projects" className="projects-section">
+    <section
+      id="projects"
+      className={`projects-section ${isVisible ? "visible" : ""}`}
+      ref={sectionRef}
+    >
       <h2 className="projects-title">Projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className={`project-card delay-${index + 1}`} key={index}>
             {project.workInProgress && <span className="work-in-progress">Work in Progress</span>}
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
