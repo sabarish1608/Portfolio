@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Charity Website",
     description: "A platform for donations, adoptions, and helping children in need.",
-    techStack: ["ReactJS", "Bootstrap", "Node.js"],
+    techStack: ["ReactJS", "CSS","Bootstrap"],
     github: "https://github.com/sabarish1608/CharityCare-Website",
     liveDemo: "https://sabarish1608.github.io/CharityCare-Website/",
     workInProgress: true,
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Website Vulnerability Analyzer",
     description: "A tool to detect SSRF and Broken Access Control vulnerabilities visually.",
-    techStack: ["ReactJS", "Django", "MongoDB"],
+    techStack: ["ReactJS", "Django"],
     github: "https://github.com/yourgithub/ssrf-bac-scanner",
     liveDemo: "",
     workInProgress: true,
