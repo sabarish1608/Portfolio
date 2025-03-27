@@ -94,4 +94,8 @@
     width: 200px;
     height: 200px;
   }
+
+  .about-detail h3 {
+    justify-content: center;
+  }
 }
