@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./About.css";
 import { FaCode, FaGraduationCap, FaKeyboard } from "react-icons/fa";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNodedotjs, SiMongodb } from "react-icons/si";
 import profilePic from "../assets/Me1.jpg";
 
 const About = React.forwardRef((props, ref) => {
@@ -42,13 +43,84 @@ const About = React.forwardRef((props, ref) => {
           </div>
 
           <div className="about-detail">
-            <h3><FaCode className="icon" /> Skills</h3>
-            <p>HTML • CSS • Bootstrap • ReactJS • Node.js • MongoDB • Python</p>
-          </div>
+  <h3><FaCode className="icon" /> Skills</h3>
+
+  <div className="skill">
+    <span>HTML</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "html-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">90%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>CSS</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "css-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">85%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>Bootstrap</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "bootstrap-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">80%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>ReactJS</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "react-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">85%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>Node.js</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "node-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">60%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>MongoDB</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "mongo-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">50%</span>
+    </div>
+  </div>
+
+  <div className="skill">
+    <span>Python</span>
+    <div className="skill-bar-container">
+      <div className="skill-bar">
+        <div className={`skill-progress ${isVisible ? "python-progress" : ""}`}></div>
+      </div>
+      <span className="skill-percentage">75%</span>
+    </div>
+  </div>
+</div>
+
 
           <div className="about-detail">
             <h3><FaGraduationCap className="icon" /> Education</h3>
-            <p>B.Tech Computer Science (Cybersecurity) - SRM Institute of Science and Technology, Ramapuram</p>
+            <p>B.Tech Computer Science and Engineering (Cybersecurity) - SRM Institute of Science and Technology, Ramapuram</p>
+            <p>CGPA: 8.85</p>
           </div>
 
           <div className="about-detail">

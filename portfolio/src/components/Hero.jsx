@@ -10,7 +10,7 @@ const Hero = ({ aboutRef }) => {
   };
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="home">
       <div className="particles-background"></div>
       <div className="hero-content">
         <h1 className="hero-margin">

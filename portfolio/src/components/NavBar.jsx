@@ -25,6 +25,11 @@ const Navbar = () => {
 
         <div className={`collapse navbar-collapse justify-content-end mobile-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav text-center">
+          <li className="nav-item">
+              <a className="nav-link" href="#about" onClick={toggleNavbar}>
+                About
+              </a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects" onClick={toggleNavbar}>
                 Projects
