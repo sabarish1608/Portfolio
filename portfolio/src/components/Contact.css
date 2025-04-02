@@ -19,7 +19,6 @@
       transition: opacity 0.6s ease, transform 0.6s ease;
   }
   
-  /* When visible, fade in & move up */
   .contact-section.visible .contact-title,
   .contact-section.visible .contact-description,
   .contact-section.visible .contact-item,
@@ -28,20 +27,17 @@
       transform: translateY(0);
   }
   
-  /* Contact cards animation */
   .contact-info {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease, transform 0.6s ease;
   }
   
-  /* When visible, fade in and move up */
   .contact-section.visible .contact-info {
       opacity: 1;
       transform: translateY(0);
   }
   
-  /* Add slight delays for a smooth effect */
   .contact-title { transition-delay: 0.1s; }
   .contact-description { transition-delay: 0.2s; }
   .contact-info:nth-child(1) { transition-delay: 0.3s; }
@@ -61,27 +57,31 @@
   }
   
   .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 12px 20px;
+    padding: 15px 20px;
     border-radius: 12px;
-    margin-bottom: 30px;
-    display: inline-block;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
+    margin: auto;
+    width: fit-content;
+    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.6); 
+    margin-bottom: 40px;
 }
-  
-  .contact-item {
+
+.contact-item {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
     font-size: 1rem;
     color: #ffffff;
-  }
-  
+    justify-content: flex-start; 
+    text-align: left;
+    width: 100%;
+}
+
   .contact-icon {
     color: #a88bff;
     font-size: 1.2rem;
@@ -100,7 +100,7 @@
   
   .contact-button {
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 500;

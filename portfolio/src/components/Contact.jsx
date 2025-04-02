@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Contact.css';
-import { FaEnvelope, FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaFileDownload, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +17,7 @@ const Contact = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger on load
+    handleScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,6 +35,7 @@ const Contact = () => {
             <FaEnvelope className="contact-icon" />
             <span>sabarishlive2@gmail.com</span>
           </div>
+
           <div className="contact-item">
             <FaLinkedin className="contact-icon" />
             <a
@@ -45,6 +46,11 @@ const Contact = () => {
             >
               linkedin.com/in/sabarish-manivannan
             </a>
+          </div>
+
+          <div className="contact-item">
+            <FaPhone className="contact-icon" />
+            <span>+91 9841200133</span>
           </div>
         </div>
 

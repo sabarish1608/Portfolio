@@ -32,7 +32,7 @@
 .about-title {
   font-size: 2rem;
   font-weight: 1.4rem;
-  color: #b589f7; /* Subtle violet */
+  color: #b589f7; 
   margin-bottom: 20px;
 }
 
@@ -44,19 +44,54 @@
 }
 
 .about-detail h3 {
-  font-size: 1.2rem; /* Reduced from previous size */
+  font-size: 1.2rem; 
   font-weight: bold;
   color: #fff;
   display: flex;
   align-items: center;
 }
 
+.about-detail ul {
+  list-style: none; 
+  padding-left: 20px;
+}
+
+.about-detail ul li {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  opacity: 0; 
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.about-detail ul li::before {
+  content: "•"; 
+  color: #66d9ef; 
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.fade-in-list.visible li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-list.visible li:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-list.visible li:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-list.visible li:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-list.visible li:nth-child(4) { transition-delay: 0.4s; }
+
 .icon {
   color: #b589f7;
   margin-right: 8px;
 }
 
-/* Initially hide all elements */
 .about-title,
 .about-detail {
     opacity: 0;
@@ -64,33 +99,28 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* When the About section is in view, show them */
 .about-section.visible .about-title,
 .about-section.visible .about-detail {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Add delays for smooth staggered animations */
 .about-title { transition-delay: 0.1s; }
-.about-detail:nth-child(1) { transition-delay: 0.2s; }
-.about-detail:nth-child(2) { transition-delay: 0.3s; }
-.about-detail:nth-child(3) { transition-delay: 0.4s; }
-.about-detail:nth-child(4) { transition-delay: 0.5s; }
-.about-detail:nth-child(5) { transition-delay: 0.6s; }
+.about-section.visible .about-intro { transition-delay: 0.2s; }
+.about-section.visible .about-skills { transition-delay: 0.3s; }
+.about-section.visible .about-education { transition-delay: 0.4s; }
+.about-section.visible .about-certificates { transition-delay: 0.5s; }
+.about-section.visible .about-hobbies { transition-delay: 0.6s; }
 
-/* Skill Section */
 .skill {
   margin: 1px 0;
 }
 
-/* Skill Bar Layout */
 .skill-bar-container {
   display: flex;
   align-items: center;
 }
 
-/* Skill Name */
 .skill span {
   font-size: 1rem;
   font-weight: 500;
@@ -98,7 +128,6 @@
   margin-bottom: 2px;
 }
 
-/* Skill Bar Background */
 .skill-bar {
   width: 100%;
   height: 10px;
@@ -107,7 +136,6 @@
   overflow: hidden;
 }
 
-/* Skill Bar Progress */
 .skill-progress {
   height: 100%;
   width: 0%;
@@ -115,7 +143,6 @@
   transition: width 1.5s ease-in-out;
 }
 
-/* Animated Progress Widths */
 .html-progress { background: #ff4b4b; width: 90%; }
 .css-progress { background: #4285F4; width: 85%; }
 .bootstrap-progress { background: #7952B3; width: 80%; }
@@ -124,7 +151,6 @@
 .mongo-progress { background: #4DB33D; width: 50%; }
 .python-progress { background: #FFD43B; width: 75%; }
 
-/* Percentage Number */
 .skill-percentage {
   font-size: 1rem;
   font-weight: bold;
@@ -151,5 +177,6 @@
 
   .about-detail h3 {
     justify-content: center;
+    margin-right: 10px;
   }
 }

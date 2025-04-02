@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './NavBar.css'; // We'll add styles here
+import './NavBar.css'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle('nav-open', !isOpen); // Apply blur to background
+    document.body.classList.toggle('nav-open', !isOpen);
   };
 
   return (
