@@ -1,4 +1,4 @@
-<h2>🚀 Sabarish Manivannan – Portfolio.</h2>
+<h2>🚀 Sabarish Manivannan – Portfolio</h2>
 Welcome to my personal portfolio website! This website showcases my skills, projects, and experience as a Full Stack Developer.
 <h2>🌟 Features</h2>
 <ul>
